@@ -53,6 +53,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"   # go install binaries (gopls, goimports, ...)
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/eps/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/eps/google-cloud-sdk/path.zsh.inc'; fi

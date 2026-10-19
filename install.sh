@@ -9,6 +9,7 @@ TS="$(date +%Y%m%d-%H%M%S)"
 # Files tracked by this repo, paths relative to both the repo root and $HOME.
 FILES=(
   ".zshrc"
+  ".vimrc"
   ".tmux.conf"
   ".config/herdr/config.toml"
 )
