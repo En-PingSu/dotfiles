@@ -1,6 +1,11 @@
 " ~/.vimrc — tracked in En-PingSu/dotfiles
 " Curated from kunchenguid's Neovim config, ported to plain Vim, plus Go setup.
 
+" ---- enable syntax + filetype plugins (REQUIRED for vim-go to load) ----
+" A user vimrc disables Vim's auto-enable of these, so turn them on explicitly.
+syntax on
+filetype plugin indent on
+
 " ---- general ----
 let mapleader = " "                 " space as leader
 set number relativenumber           " hybrid line numbers
