@@ -17,7 +17,7 @@ unset __conda_setup
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-alias sshk="ssh enpingsu@login.khoury.northeastern.edu"
+alias sshk="ssh khoury"   # host/user live in ~/.ssh/config (untracked)
 alias la="ls -la"
 
 cpwd() {
