@@ -1,0 +1,16 @@
+# backups created by install.sh
+*.pre-dotfiles-*
+*.bak-*
+
+# never commit secrets
+.env
+.env.*
+*.key
+*.pem
+*_token
+*_secret
+id_rsa*
+id_ed25519*
+
+# macOS cruft
+.DS_Store
