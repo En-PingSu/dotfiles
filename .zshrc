@@ -71,5 +71,17 @@ alias m='git switch main'
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^f' autosuggest-accept
 
+# timer [minutes] [label]: countdown, then a notification and sound (default 25 min)
+timer() {
+  local secs=$(( ${1:-25} * 60 )) label=${2:-Timer}
+  while (( secs > 0 )); do
+    printf '\r%s %02d:%02d ' "$label" $((secs/60)) $((secs%60))
+    sleep 1; (( secs-- ))
+  done
+  printf '\r%s done!     \n' "$label"
+  osascript -e "display notification \"$label finished\" with title \"Timer\""
+  afplay /System/Library/Sounds/Glass.aiff
+}
+
 # zsh syntax highlighting — keep this the LAST line sourced in .zshrc
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
