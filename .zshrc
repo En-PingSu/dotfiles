@@ -80,7 +80,7 @@ timer() {
   done
   printf '\r%s done!     \n' "$label"
   osascript -e "display notification \"$label finished\" with title \"Timer\""
-  afplay /System/Library/Sounds/Glass.aiff
+  repeat 3 afplay /System/Library/Sounds/Glass.aiff
 }
 
 # zsh syntax highlighting — keep this the LAST line sourced in .zshrc
